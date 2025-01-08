@@ -1,0 +1,51 @@
+.testimonial{
+   
+    background-color: var(--c1);
+    margin-top: 100px;
+    height: 500px;
+    border-radius: 40px;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    position: relative;
+}
+.test_i{
+    position: absolute;
+    height: 120px;
+    top: -50px;
+    left: 200px;
+    transform: rotate(-10deg);
+}
+.test_i2{
+    position: absolute;
+    height: 120px;
+    transform: rotate(40deg);
+    right: 20px;
+    bottom: 50px;
+    animation-name: tape_baby;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes tape_baby {
+    0%{
+        transform:rotate(40deg) translate(0px,0px);
+    }
+    50%{
+        transform:rotate(40deg) translate(5px, 20px);
+    }
+    100%{
+        transform:rotate(40deg) translate(0px,0px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .test_i{
+        height: 100px;
+        top: -70px;
+        left: 10px;
+    }
+    .test_i2{
+        height: 100px;
+    }
+}

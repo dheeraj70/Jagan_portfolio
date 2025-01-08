@@ -1,0 +1,166 @@
+.about {
+  margin-top: 150px;
+}
+.abt_h {
+  text-align: center;
+  color: var(--c4);
+  text-decoration: underline;
+}
+.about_div {
+  display: flex;
+  margin-top: 50px;
+}
+.abt_divl {
+  width: 50%;
+  justify-content: left;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+.abt_pic {
+  height: 450px;
+  animation-name: abt_pic;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes abt_pic {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(7px, 20px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+.abt_divr {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.abt_time {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 70px;
+}
+.abut_time_head {
+  font-size: 32px;
+  color: var(--c4);
+  text-decoration: underline;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Timeline Container */
+.timeline {
+  width: 80%;
+  margin: 0px auto;
+  position: relative;
+}
+
+.timeline-item {
+  margin-bottom: 15px;
+}
+
+.timeline-content {
+  padding: 10px 20px;
+  background: #7edae3;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.5s ease;
+}
+
+.timeline-content span {
+  font-size: 1.1rem;
+  color: var(--c4);
+  font-weight: bolder;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.timeline-content p {
+  font-size: 1rem;
+  color: rgb(55, 56, 61);
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.timeline-content ul {
+  list-style: disc;
+  margin: 5px 0 0 20px;
+  padding: 0;
+}
+
+.timeline-content ul li {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.vertical {
+  width: 10px;
+  background-color: rgb(19, 36, 83);
+  height: 100%;
+  position: absolute;
+  left: -25px;
+  border-radius: 25px;
+}
+
+.v-dot {
+  height: 30px;
+  width: 30px;
+  left: -10px;
+  /* box-shadow: 0px 8px 10px #ffffff, 0px -8px 10px #ffffff; */
+  background-color: azure;
+  /* top: 20%; */
+  transition: top 0.3s ease 0s;
+  position: relative;
+  border-radius: 100%;
+}
+.active_time {
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.4);
+  transform: scale(1.02);
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    margin-top: 120px;
+  }
+  .about_div {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+  }
+  .abt_divl {
+    width: 100%;
+    justify-content: left;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+  }
+  .abt_pic {
+    height: 350px;
+    animation-name: abt_pic;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  .abt_divr {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .timeline{
+    width: 90%;
+    margin-left: 30px;
+  }
+}

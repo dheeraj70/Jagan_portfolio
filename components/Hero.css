@@ -1,0 +1,122 @@
+.hero{
+    display: flex;
+    margin-top: 200px;
+    width: 100%;
+    
+}
+.herol{
+    
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: end;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+.heror{
+    display: flex;
+    width: 50%;
+   
+    
+}
+.hero_t1{
+    font-size: 45px;
+}
+.hero_t2{
+    font-size: 23px;
+}
+.hero_t3{
+    font-size: 30px;
+    font-style: italic;
+    margin-top: 20px;
+}
+.hero_name{
+    color: rgb(82, 127, 161);
+    text-shadow: 1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff,
+             1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+
+    font-weight: bold;
+}
+.hero_img{
+    width:450px;
+    margin-left: 50px;
+    position: relative;
+    animation: hero_img;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+@keyframes hero_img {
+    0%{
+        transform: translate(0px,0px);
+    }
+    50%{
+        transform: translate(7px,20px);
+
+    }
+    100%{
+        transform: translate(0px,0px);
+
+    }
+}
+.fhbaby{
+    position: absolute;
+    right: 50px;
+    top: 0px;
+    height: 125px;
+    animation: fhbaby;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+@keyframes fhbaby {
+    0%{
+        transform: translate(0px,0px);
+
+    }
+    50%{
+        transform: translate(10px,20px);
+
+    }
+    100%{
+        transform: translate(0px,0px);
+
+        
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .hero{
+        display: flex;
+        margin-top: 175px;
+        width: 100%;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    .herol{
+        width: 100%;
+    }
+    .heror{
+        display: flex;
+        justify-content: center;
+        width: 100%;  
+    }
+    .hero_img{
+        width:350px;
+        margin-left: 0px;
+        position: static;
+    }
+    .fhbaby{
+        position: absolute;
+        right: 80px;
+        top: -45px;
+        height: 90px;
+        animation: fhbaby;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function:ease-in-out;
+    }
+}

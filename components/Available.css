@@ -1,0 +1,99 @@
+.available {
+  background-color: var(--c1);
+  margin-top: 100px;
+  border-radius: 40px;
+  padding-top: 30px;
+  padding-bottom: 70px;
+  position: relative;
+}
+.avh {
+  text-align: center;
+  color: var(--c4);
+  text-decoration: underline;
+}
+.fhste {
+  position: absolute;
+  height: 100px;
+  top: -35px;
+  right: 120px;
+  transform: rotate(45deg);
+}
+.av_div {
+  display: flex;
+  margin-top: 60px;
+}
+.clock {
+  width: 90px;
+  position: absolute;
+
+  top: 70px;
+  left: 100px;
+  animation: clock 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes clock {
+  0% {
+    transform: rotate(-20deg) translate(0px, 0px);
+  }
+  50% {
+    transform: rotate(-20deg) translate(5px, 30px);
+  }
+  100% {
+    transform: rotate(-20deg) translate(0px, 0px);
+  }
+}
+.hospital_img {
+  width: 200px;
+  margin-right: 70px;
+}
+.av_divl {
+  width: 50%;
+  display: flex;
+  justify-content: right;
+}
+.av_divr {
+  width: 50%;
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--c4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .fhste {
+    height: 75px;
+    right: 12px;
+  }
+  .av_div {
+    display: flex;
+    margin-top: 80px;
+  }
+  .clock {
+    width: 70px;
+    top: 80px;
+    left: 15px;
+  }
+  .hospital_img {
+    width: 120px;
+    height: 200px;
+    margin-right: 20px;
+  }
+  .av_divl {
+    width: 40%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  .av_divr {
+    width: 60%;
+    font-size: 23px;
+    font-weight: bold;
+    color: var(--c4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
