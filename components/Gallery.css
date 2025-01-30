@@ -1,0 +1,219 @@
+.gallery{
+   
+    background-color: var(--c1);
+    margin-top: 100px;
+    height: auto;
+    border-radius: 40px;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.avh {
+  text-align: center;
+  color: var(--c4);
+  text-decoration: underline;
+}
+.gall_i{
+    position: absolute;
+    height: 120px;
+    top: -50px;
+    left: 200px;
+    transform: rotate(-10deg);
+}
+.gall_i2{
+    position: absolute;
+    height: 120px;
+    transform: rotate(40deg);
+    right: 20px;
+    bottom: 50px;
+    animation-name: tape_baby;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    
+}
+
+
+.gcontainer{
+    width: 100%;
+    margin: 30px auto;
+    columns: 4;
+    column-gap: 20px;
+
+}
+.gbox{
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+.gimage{
+    max-width: 100%;
+    border-radius: 15px;
+    width: "100%"; 
+    height: "auto";
+    object-fit: "cover";
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.gimage:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.gimage:active{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.viewmore{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .viewer img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+  }
+  
+  .close-btn,
+  .prev-btn,
+  .next-btn {
+    position: absolute;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  .prev-btn-arr{
+    transform: rotate(180deg);
+  }
+  
+  .close-btn {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .prev-btn {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .next-btn {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .close-btn-svg{
+    height: 40px;
+  }
+
+@keyframes tape_baby {
+    0%{
+        transform:rotate(40deg) translate(0px,0px);
+    }
+    50%{
+        transform:rotate(40deg) translate(5px, 20px);
+    }
+    100%{
+        transform:rotate(40deg) translate(0px,0px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .gallery{
+   
+        background-color: var(--c1);
+        margin-top: 100px;
+        height: auto;
+        border-radius: 40px;
+        padding-top: 20px;
+        padding-bottom: 70px;
+        position: relative;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+.gcontainer{
+    width: 100%;
+    margin: 30px auto;
+    columns: 2;
+    column-gap: 5px;
+
+}
+.gbox{
+    width: 100%;
+    margin-bottom: 5px;
+
+}
+.gimage{
+    max-width: 100%;
+    border-radius: 15px;
+    width: "100%"; 
+    height: "auto";
+    object-fit: "cover";
+    cursor: pointer;
+}
+.viewmore{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.prev-btn {
+    left: 10px;
+    top: 90%;
+    transform: translateY(-50%);
+  }
+  
+  .next-btn {
+    right: 10px;
+    top: 90%;
+    transform: translateY(-50%);
+  }
+  .close-btn-svg{
+    height: 40px;
+  }
+  .gall_i{
+    position: absolute;
+    height: 100px;
+    top: -50px;
+    left: 70%;
+    transform: rotate(10deg);
+}
+.gall_i2{
+    position: absolute;
+    height: 100px;
+    transform: rotate(40deg);
+    right: 20px;
+    bottom: 0px;
+    animation-name: tape_baby;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    
+}
+}

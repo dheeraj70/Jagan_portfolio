@@ -1,7 +1,9 @@
 import React, { useRef } from "react";
 import "./Nav.css";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 const Nav = ({ scrolled }) => {
+  const router = useRouter();
   const mobnav = useRef(null);
   const burger1 = useRef(null);
   const burger2 = useRef(null);
@@ -28,6 +30,7 @@ const Nav = ({ scrolled }) => {
     >
       <div className="nav_logo">
         <img
+        onClick={() => router.push("/")}
           className="nav_logo_img"
           src={scrolled ? "/nav_logo-dark.png" : "/nav_logo-light.png"}
           alt="Dr. Jagan Mohan Varakala"
@@ -35,8 +38,9 @@ const Nav = ({ scrolled }) => {
       </div>
       <div className="nav_links">
         <Link href={"/about"}>About</Link>
-        <Link href={"/about"}>Testimonials</Link>
+        <Link href={"/testimonials"}>Testimonials</Link>
         {/*<Link href={'/about'}>Treatments</Link>*/}
+        <Link href={"/gallery"}>Gallery</Link>
         <Link href={"/about"}>Blog</Link>
         <button className="nav_btn">Consult me</button>
       </div>
@@ -48,13 +52,17 @@ const Nav = ({ scrolled }) => {
         </button>
       </div>
       <div ref={mobnav} className="mob-nav">
-      <Link href={"/about"}>About</Link>
-        <Link href={"/about"}>Testimonials</Link>
-        {/*<Link href={'/about'}>Treatments</Link>*/}
-        <Link href={"/about"}>Gallery</Link>
-        <Link href={"/about"}>Blog</Link>
+      <Link href={"/"} onClick={burgerPressed}>Home</Link>
+      <Link href={"/about"} onClick={burgerPressed}>About</Link>
+        <Link href={"/testimonials"} onClick={burgerPressed}>Testimonials</Link>
+        <Link href={"/gallery"} onClick={burgerPressed}>Gallery</Link>
+        <Link href={"/blog"} onClick={burgerPressed}>Blog</Link>
+        <Link href={"/consult"} onClick={burgerPressed}>Consult Now</Link>
         
       </div>
+      <button className="mob-nav-bottom">
+        Consult Now
+      </button>
     </nav>
   );
 };

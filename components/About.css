@@ -140,6 +140,7 @@
   .abt_divl {
     width: 100%;
     justify-content: left;
+    text-align: center;
     display: flex;
     align-items: center;
     font-size: 20px;

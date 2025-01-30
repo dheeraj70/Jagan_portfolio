@@ -99,6 +99,9 @@
     .herol{
         width: 100%;
     }
+    .hero_t3{
+        font-size: 25px;
+    }
     .heror{
         display: flex;
         justify-content: center;
@@ -120,3 +123,40 @@
         animation-timing-function:ease-in-out;
     }
 }
+
+@media screen and (min-width: 768px) 
+    and (max-width: 1024px) {
+        .hero{
+            display: flex;
+            margin-top: 175px;
+            width: 100%;
+            flex-direction: row;
+            row-gap: 30px;
+        }
+        .herol{
+            width: 100%;
+        }
+        .hero_t3{
+            font-size: 25px;
+        }
+        .heror{
+            display: flex;
+            justify-content: center;
+            width: 100%;  
+        }
+        .hero_img{
+            width:350px;
+            margin-left: 0px;
+            position: static;
+        }
+        .fhbaby{
+            position: absolute;
+            right: 80px;
+            top: -45px;
+            height: 90px;
+            animation: fhbaby;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function:ease-in-out;
+        }
+    }

@@ -2,12 +2,16 @@
    
     background-color: var(--c1);
     margin-top: 100px;
-    height: 500px;
     border-radius: 40px;
     padding-top: 30px;
     padding-bottom: 70px;
     position: relative;
 }
+.avh {
+    text-align: center;
+    color: var(--c4);
+    text-decoration: underline;
+  }
 .test_i{
     position: absolute;
     height: 120px;
@@ -20,12 +24,52 @@
     height: 120px;
     transform: rotate(40deg);
     right: 20px;
-    bottom: 50px;
+    bottom: 0px;
     animation-name: tape_baby;
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     
+}
+.test-content{
+    margin-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.test-item{
+    border: 2px var(--c3) solid;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+.test-name{
+    font-size: 23px;
+    font-weight: bold;
+    color: var(--c4);
+}
+.test-stars{
+    display: flex;
+    column-gap: 5px;
+}
+.more-revs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+.mr-btn{
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--c3);
+    cursor: pointer;
 }
 @keyframes tape_baby {
     0%{
@@ -42,10 +86,17 @@
 @media screen and (max-width: 768px) {
     .test_i{
         height: 100px;
-        top: -70px;
-        left: 10px;
+        top: -30px;
+        left: 0px;
     }
     .test_i2{
         height: 100px;
+        bottom: -25px;
     }
+    .test-content{
+        padding-left: 20px;
+        padding-right: 20px;
+        grid-template-columns: 1fr;
+    }
+
 }
