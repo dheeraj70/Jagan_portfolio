@@ -4,8 +4,8 @@ import React, { useEffect, useState, useRef } from "react";
 import "./About.css";
 
 const About = () => {
-  const [scrollPos, setScrollPos] = useState(0); 
-  const [activeIndex, setActiveIndex] = useState(0); 
+  const [scrollPos, setScrollPos] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
   const timelineRef = useRef(null);
 
   useEffect(() => {
@@ -13,11 +13,11 @@ const About = () => {
       if (!timelineRef.current) return;
 
       const timeline = timelineRef.current;
-      const timelineTop = timeline.offsetTop; 
+      const timelineTop = timeline.offsetTop;
       const timelineHeight = timeline.offsetHeight;
       const viewportHeight = window.innerHeight;
 
-      const scrollY = window.scrollY + viewportHeight * 0.65; 
+      const scrollY = window.scrollY + viewportHeight * 0.65;
       const timelineStart = timelineTop;
       const timelineEnd = timelineTop + timelineHeight;
 
@@ -25,13 +25,14 @@ const About = () => {
         const relativeScroll =
           ((scrollY - timelineStart) / (timelineEnd - timelineStart)) * 100;
 
-        const snappedScroll = Math.floor(relativeScroll / 20) * 20;
+        // 6 timeline sections
+        const snappedScroll = Math.floor(relativeScroll / (100 / 6)) * (100 / 6);
 
-        setScrollPos(snappedScroll); 
+        setScrollPos(snappedScroll);
       } else if (scrollY < timelineStart) {
-        setScrollPos(0); 
+        setScrollPos(0);
       } else if (scrollY > timelineEnd) {
-        setScrollPos(100); 
+        setScrollPos(100);
       }
     };
 
@@ -40,13 +41,14 @@ const About = () => {
   }, []);
 
   useEffect(() => {
-    // Update the active index based on snapped scroll position
-    setActiveIndex(scrollPos / 20); // Divide timeline into 5 sections (20% each)
+    // 6 timeline sections
+    setActiveIndex(Math.round(scrollPos / (100 / 6)));
   }, [scrollPos]);
 
   return (
     <div className="about">
       <h1 className="abt_h">About me</h1>
+
       <div className="about_div">
         <div className="abt_divl">
           <p>
@@ -63,13 +65,16 @@ const About = () => {
             programs that elevate standards in neonatal care.
           </p>
         </div>
+
         <div className="abt_divr">
           <img className="abt_pic" src="/jagan_hero.png" alt="" />
         </div>
       </div>
+
       <div className="abt_time">
         <div className="abt_time_div" ref={timelineRef}>
           <h2 className="abut_time_head">Experience</h2>
+
           <div className="timeline">
             <div className="vertical">
               <div
@@ -82,6 +87,7 @@ const About = () => {
                 className="v-dot"
               ></div>
             </div>
+
             <div className="timeline-item">
               <div
                 className={`timeline-content ${
@@ -94,6 +100,7 @@ const About = () => {
                 </p>
               </div>
             </div>
+
             <div className="timeline-item">
               <div
                 className={`timeline-content ${
@@ -107,6 +114,7 @@ const About = () => {
                 </p>
               </div>
             </div>
+
             <div className="timeline-item">
               <div
                 className={`timeline-content ${
@@ -120,6 +128,7 @@ const About = () => {
                 </p>
               </div>
             </div>
+
             <div className="timeline-item">
               <div
                 className={`timeline-content ${
@@ -135,21 +144,36 @@ const About = () => {
                 </p>
               </div>
             </div>
+
             <div className="timeline-item">
               <div
                 className={`timeline-content ${
                   activeIndex === 4 ? "active_time" : ""
                 }`}
               >
-                <span>2021 - Present</span>
+                <span>2021 - 2026</span>
                 <p>
-                  <strong>Consultant Neonatologist</strong>, Paramitha Women and
-                  Children's Hospital, Madinaguda, Hyderabad
+                  <strong>Consultant Neonatologist</strong>, Paramitha Women
+                  and Children's Hospital, Madinaguda, Hyderabad
                 </p>
                 <ul>
                   <li>Head of a 22-bedded NICU (NNF accredited).</li>
                   <li>Oversaw academics for the NNF fellowship programme.</li>
                 </ul>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div
+                className={`timeline-content ${
+                  activeIndex === 5 ? "active_time" : ""
+                }`}
+              >
+                <span>2026 - Present</span>
+                <p>
+                  <strong>Consultant Neonatologist</strong>, Rainbow
+                  Children's Hospital, Hydernagar
+                </p>
               </div>
             </div>
           </div>
