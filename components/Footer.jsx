@@ -10,7 +10,7 @@ const Footer = () => {
       </div>
       <div className="foot_v"></div>
       <div className="footer-r">
-        <p>Call / Whatsapp For Consulation : 9030446570</p>
+        <p>Call / Whatsapp For Consulation : 8008214395</p>
         <p>Address: Main Road Madinaguda, Miyapur, Hyderabad, Telangana 500049</p>
       </div>
     </div>
